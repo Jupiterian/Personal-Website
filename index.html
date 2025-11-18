@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Ishan "Jupiterian" Jha</title>
+		<meta
+			name="description"
+			content="Portfolio of Ishan Jha (Jupiterian) – high school developer focusing on cybersecurity, data analysis, and ATP tennis rankings analytics."
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+		/>
+ 		<style>
+			:root {
+				--bg: #0b1120;
+				--bg-alt: #020617;
+				--accent: #38bdf8;
+				--text: #e5e7eb;
+				--muted: #9ca3af;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+					"Segoe UI", sans-serif;
+				background: var(--bg);
+				color: var(--text);
+			}
+
+			body {
+				min-height: 100vh;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 1.5rem 1.25rem 3rem;
+			}
+
+			header.site-header {
+				border-bottom: 1px solid #1f2937;
+				background: #020617;
+			}
+
+			.nav-inner {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 0.75rem 1.25rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+			}
+
+			.brand {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.brand-name {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+
+			.brand-tagline {
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			nav ul {
+				display: flex;
+				gap: 1rem;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				font-size: 0.85rem;
+			}
+
+			nav a {
+				color: var(--muted);
+			}
+
+			nav a:hover {
+				color: var(--text);
+				text-decoration: none;
+			}
+
+			.hero {
+				padding: 2.5rem 0 1.5rem;
+			}
+
+			.hero-title {
+				font-size: clamp(1.9rem, 4vw, 2.4rem);
+				margin: 0 0 0.75rem;
+			}
+
+			.hero-subtitle {
+				max-width: 640px;
+				color: var(--muted);
+				font-size: 0.95rem;
+				line-height: 1.7;
+				margin: 0 0 0.75rem;
+			}
+
+			.hero-meta {
+				font-size: 0.9rem;
+				color: var(--muted);
+				margin-bottom: 1.25rem;
+			}
+
+			.hero-links {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.btn-primary,
+			.btn-ghost {
+				border-radius: 999px;
+				padding: 0.5rem 1rem;
+				font-size: 0.86rem;
+				border: 1px solid transparent;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.btn-primary {
+				background: var(--accent);
+				color: #020617;
+				border-color: var(--accent);
+			}
+
+			.btn-primary:hover {
+				filter: brightness(1.05);
+			}
+
+			.btn-ghost {
+				background: transparent;
+				color: var(--text);
+				border-color: #4b5563;
+			}
+
+			.btn-ghost:hover {
+				background: #111827;
+			}
+
+			.section {
+				margin-top: 2rem;
+				padding-top: 0.25rem;
+			}
+
+			.section-title {
+				font-size: 1.1rem;
+				margin-bottom: 0.4rem;
+			}
+
+			.section-body {
+				font-size: 0.95rem;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			ul.simple-list {
+				padding-left: 1.1rem;
+				margin: 0.4rem 0 0;
+				color: var(--muted);
+				font-size: 0.95rem;
+			}
+
+			.featured-portfolio {
+				margin-top: 2rem;
+				padding: 1.25rem 0;
+				border-top: 1px solid #1f2937;
+				border-bottom: 1px solid #1f2937;
+			}
+
+			.featured-kicker {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				color: var(--muted);
+				margin-bottom: 0.2rem;
+			}
+
+			.featured-title {
+				margin: 0 0 0.35rem;
+				font-size: 1.15rem;
+			}
+
+			.featured-subtitle {
+				color: var(--muted);
+				font-size: 0.95rem;
+				margin: 0 0 0.75rem;
+			}
+
+			.featured-list {
+				padding-left: 1.1rem;
+				margin: 0 0 0.9rem;
+				font-size: 0.93rem;
+				color: var(--muted);
+			}
+
+			.portfolio-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+				gap: 1rem;
+				margin-top: 0.75rem;
+			}
+
+			.portfolio-card {
+				border: 1px solid #1f2937;
+				border-radius: 0.75rem;
+				padding: 0.9rem 0.9rem 0.9rem;
+				background: #020617;
+				font-size: 0.9rem;
+			}
+
+			.portfolio-card h3 {
+				margin: 0 0 0.3rem;
+				font-size: 0.98rem;
+			}
+
+			.portfolio-card p {
+				margin: 0 0 0.5rem;
+				color: var(--muted);
+			}
+
+			.portfolio-meta {
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			.contact-list {
+				list-style: none;
+				padding: 0;
+				margin: 0.5rem 0 0;
+				font-size: 0.95rem;
+				color: var(--muted);
+			}
+
+			footer {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 1.5rem 1.25rem 2.5rem;
+				font-size: 0.8rem;
+				color: var(--muted);
+				border-top: 1px solid #1f2937;
+				margin-top: 2.5rem;
+			}
+
+			@media (max-width: 700px) {
+				.nav-inner {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				nav ul {
+					flex-wrap: wrap;
+				}
+			}
+
+			.hero-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				align-items: center;
+			}
+
+			.btn-primary,
+			.btn-ghost {
+				border-radius: var(--radius-pill);
+				padding: 0.55rem 1.1rem;
+				font-size: 0.86rem;
+				font-weight: 500;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				border: 1px solid transparent;
+				cursor: pointer;
+				transition: transform 0.15s ease, box-shadow 0.15s ease,
+					background 0.15s ease, border-color 0.15s ease;
+				text-decoration: none;
+			}
+
+			.btn-primary {
+				background: radial-gradient(circle at 0 0, #38bdf8, #0ea5e9);
+				color: #0b1120;
+				box-shadow: 0 18px 40px rgba(56, 189, 248, 0.5);
+			}
+
+			.btn-primary:hover {
+				transform: translateY(-1px);
+				box-shadow: 0 22px 50px rgba(56, 189, 248, 0.6);
+			}
+
+			.btn-ghost {
+				background: rgba(15, 23, 42, 0.95);
+				color: var(--muted);
+				border-color: rgba(148, 163, 184, 0.6);
+			}
+
+			.btn-ghost:hover {
+				background: rgba(15, 23, 42, 1);
+				color: var(--text);
+				border-color: rgba(148, 163, 184, 0.9);
+			}
+
+			.hero-secondary-note {
+				margin-top: 0.6rem;
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			.hero-secondary-note strong {
+				color: #fbbf24;
+			}
+
+			.hero-aside {
+				align-self: stretch;
+			}
+
+			.hero-card {
+				position: relative;
+				border-radius: var(--radius-xl);
+				padding: 1.2rem 1.3rem 1.2rem;
+				background: radial-gradient(circle at top, #0b1120, #020617 55%, #000 100%);
+				border: 1px solid rgba(148, 163, 184, 0.35);
+				box-shadow: var(--shadow-soft);
+				overflow: hidden;
+			}
+
+			.hero-card::before {
+				content: "";
+				position: absolute;
+				inset: -40%;
+				background: radial-gradient(
+					circle at 0 0,
+					rgba(56, 189, 248, 0.18),
+					transparent 55%
+				);
+				opacity: 0.65;
+				pointer-events: none;
+			}
+
+			.hero-card-inner {
+				position: relative;
+				z-index: 1;
+			}
+
+			.hero-card-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.9rem;
+			}
+
+			.hero-card-title {
+				font-size: 0.9rem;
+				font-weight: 600;
+			}
+
+			.hero-card-status {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				padding: 0.25rem 0.7rem;
+				border-radius: 999px;
+				background: rgba(15, 23, 42, 0.96);
+				border: 1px solid rgba(56, 189, 248, 0.4);
+				font-size: 0.76rem;
+				color: #7dd3fc;
+			}
+
+			.hero-card-metrics {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 0.9rem;
+				margin-bottom: 1rem;
+			}
+
+			.metric {
+				padding: 0.6rem 0.7rem;
+				border-radius: var(--radius-lg);
+				border: 1px solid rgba(148, 163, 184, 0.5);
+				background: rgba(15, 23, 42, 0.96);
+			}
+
+			.metric-label {
+				font-size: 0.7rem;
+				color: var(--muted);
+				margin-bottom: 0.25rem;
+			}
+
+			.metric-value {
+				font-size: 0.98rem;
+				font-weight: 600;
+			}
+
+			.hero-card-footnote {
+				font-size: 0.76rem;
+				color: var(--muted);
+				margin-bottom: 0.75rem;
+			}
+
+			.hero-card-links {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.mini-link {
+				font-size: 0.75rem;
+				padding: 0.25rem 0.65rem;
+				border-radius: 999px;
+				border: 1px solid rgba(148, 163, 184, 0.5);
+				color: var(--muted);
+				background: rgba(15, 23, 42, 0.9);
+			}
+
+			.section {
+				margin-top: 0.75rem;
+				padding: 1.6rem 1.4rem 1.7rem;
+				border-radius: var(--radius-xl);
+				background: rgba(15, 23, 42, 0.96);
+				border: 1px solid var(--border-subtle);
+				box-shadow: var(--shadow-soft);
+			}
+
+			.section-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 0.75rem;
+				margin-bottom: 1.1rem;
+			}
+
+			.section-title {
+				font-size: 1.02rem;
+				font-weight: 600;
+			}
+
+			.section-kicker {
+				font-size: 0.78rem;
+				text-transform: uppercase;
+				letter-spacing: 0.18em;
+				color: var(--muted);
+			}
+
+			.section-body {
+				font-size: 0.9rem;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.about-grid {
+				display: grid;
+				grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+				gap: 1.6rem;
+				align-items: flex-start;
+			}
+
+			.about-list {
+				list-style: none;
+				padding: 0;
+				margin: 0.65rem 0 0;
+				display: grid;
+				gap: 0.35rem;
+				font-size: 0.88rem;
+			}
+
+			.about-list li::before {
+				content: "•";
+				color: var(--accent);
+				margin-right: 0.35rem;
+			}
+
+			.about-meta-card {
+				padding: 0.85rem 0.9rem;
+				border-radius: var(--radius-lg);
+				background: rgba(15, 23, 42, 0.98);
+				border: 1px dashed rgba(148, 163, 184, 0.7);
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			.about-meta-card strong {
+				color: var(--text);
+			}
+
+			.chips-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.45rem;
+				margin-top: 0.55rem;
+			}
+
+			.chip {
+				border-radius: 999px;
+				border: 1px solid rgba(148, 163, 184, 0.6);
+				padding: 0.2rem 0.6rem;
+				font-size: 0.76rem;
+				color: var(--muted);
+				background: radial-gradient(circle at 20% 0, #0b1120, #020617);
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+				gap: 1rem;
+			}
+
+			.skills-card {
+				padding: 0.9rem 0.95rem;
+				border-radius: var(--radius-lg);
+				border: 1px solid rgba(148, 163, 184, 0.7);
+				background: rgba(15, 23, 42, 0.98);
+			}
+
+			.skills-card h3 {
+				margin: 0 0 0.4rem;
+				font-size: 0.9rem;
+			}
+
+			.skills-card p {
+				margin: 0;
+				font-size: 0.78rem;
+				color: var(--muted);
+			}
+
+			.featured-portfolio {
+				border-radius: var(--radius-xl);
+				background: radial-gradient(circle at top left, #0f172a, #020617 55%);
+				border: 1px solid rgba(56, 189, 248, 0.35);
+				padding: 1.4rem 1.45rem 1.4rem;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.featured-grid {
+				display: grid;
+				grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.5fr);
+				gap: 1.4rem;
+				align-items: center;
+			}
+
+			.featured-kicker {
+				font-size: 0.78rem;
+				text-transform: uppercase;
+				letter-spacing: 0.16em;
+				color: #7dd3fc;
+				margin-bottom: 0.3rem;
+			}
+
+			.featured-title {
+				font-size: 1.2rem;
+				margin: 0 0 0.4rem;
+			}
+
+			.featured-subtitle {
+				font-size: 0.9rem;
+				color: var(--muted);
+				margin-bottom: 0.7rem;
+			}
+
+			.featured-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.45rem;
+				margin-bottom: 0.9rem;
+			}
+
+			.featured-badge {
+				font-size: 0.76rem;
+				padding: 0.25rem 0.65rem;
+				border-radius: 999px;
+				background: rgba(15, 23, 42, 0.96);
+				border: 1px solid rgba(56, 189, 248, 0.5);
+				color: #bae6fd;
+			}
+
+			.featured-list {
+				font-size: 0.86rem;
+				color: var(--muted);
+				margin: 0 0 0.9rem;
+				padding-left: 1.1rem;
+			}
+
+			.featured-list li {
+				margin-bottom: 0.25rem;
+			}
+
+			.featured-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.7rem;
+			}
+
+			.featured-visual {
+				position: relative;
+				border-radius: var(--radius-lg);
+				padding: 0.9rem 0.9rem 0.85rem;
+				background: radial-gradient(circle at 0 0, #0f172a, #020617);
+				border: 1px solid rgba(148, 163, 184, 0.5);
+				box-shadow: 0 18px 50px rgba(15, 23, 42, 0.95);
+				font-size: 0.78rem;
+			}
+
+			.featured-visual-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.7rem;
+			}
+
+			.terminal-dots {
+				display: flex;
+				gap: 0.25rem;
+			}
+
+			.terminal-dot {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: #f97316;
+			}
+
+			.terminal-dot:nth-child(2) {
+				background: #22c55e;
+			}
+
+			.terminal-dot:nth-child(3) {
+				background: #eab308;
+			}
+
+			.terminal-line {
+				font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+					"Liberation Mono", "Courier New", monospace;
+				color: #e5e7eb;
+				margin-bottom: 0.2rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.terminal-line span.prompt {
+				color: #22c55e;
+			}
+
+			.terminal-footnote {
+				margin-top: 0.4rem;
+				color: var(--muted);
+			}
+
+			.portfolio-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+				gap: 1rem;
+			}
+
+			.portfolio-card {
+				padding: 0.95rem 1rem;
+				border-radius: var(--radius-lg);
+				border: 1px solid rgba(148, 163, 184, 0.75);
+				background: rgba(15, 23, 42, 0.98);
+			}
+
+			.portfolio-card h3 {
+				margin: 0 0 0.3rem;
+				font-size: 0.96rem;
+			}
+
+			.portfolio-card p {
+				margin: 0 0 0.6rem;
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			.portfolio-meta {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 0.75rem;
+				color: var(--muted);
+			}
+
+			.portfolio-meta span {
+				opacity: 0.9;
+			}
+
+			.portfolio-link {
+				font-size: 0.76rem;
+				color: #7dd3fc;
+			}
+
+			.contact {
+				display: grid;
+				grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+				gap: 1.4rem;
+				align-items: center;
+			}
+
+			.contact p {
+				font-size: 0.88rem;
+				color: var(--muted);
+				margin-bottom: 0.9rem;
+			}
+
+			.contact-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: grid;
+				gap: 0.4rem;
+				font-size: 0.82rem;
+			}
+
+			.contact-list a {
+				color: #7dd3fc;
+			}
+
+			.contact-card {
+				border-radius: var(--radius-lg);
+				padding: 0.9rem 1rem;
+				background: rgba(15, 23, 42, 0.98);
+				border: 1px solid rgba(148, 163, 184, 0.7);
+				font-size: 0.8rem;
+				color: var(--muted);
+			}
+
+			footer {
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 1.4rem 1.25rem 2.5rem;
+				font-size: 0.76rem;
+				color: var(--muted);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 0.6rem;
+			}
+
+			footer a {
+				color: #9ca3af;
+			}
+
+			@media (max-width: 900px) {
+				.hero {
+					grid-template-columns: minmax(0, 1fr);
+					gap: 2rem;
+				}
+
+				.hero-aside {
+					order: -1;
+				}
+
+				.hero-card-metrics {
+					grid-template-columns: repeat(3, minmax(0, 1fr));
+				}
+
+				.featured-grid {
+					grid-template-columns: minmax(0, 1fr);
+				}
+
+				.contact {
+					grid-template-columns: minmax(0, 1fr);
+				}
+			}
+
+			@media (max-width: 720px) {
+				.nav-inner {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.5rem;
+				}
+
+				nav ul {
+					font-size: 0.78rem;
+				}
+
+				.hero-card-metrics {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.section {
+					padding: 1.3rem 1rem 1.4rem;
+				}
+
+				.section-header {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.about-grid {
+					grid-template-columns: minmax(0, 1fr);
+				}
+			}
+
+			@media (max-width: 480px) {
+				main {
+					padding-inline: 1rem;
+				}
+
+				.hero-card-metrics {
+					grid-template-columns: minmax(0, 1fr);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="nav-inner">
+				<div class="brand">
+					<span class="brand-name">Ishan "Jupiterian" Jha</span>
+					<span class="brand-tagline">High school student · CS, CyberPatriot, data</span>
+				</div>
+				<nav aria-label="Primary">
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#portfolio">portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" aria-labelledby="hero-title">
+				<div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+					<img
+						src="headshot.JPG"
+						alt="Portrait of Ishan \"Jupiterian\" Jha"
+						style="width: 96px; height: 96px; border-radius: 999px; object-fit: cover; border: 1px solid #1f2937;"
+					/>
+					<div>
+						<h1 class="hero-title" id="hero-title">Hi, I'm Ishan.</h1>
+						<p class="hero-subtitle">
+							Online I go by <strong>"Jupiterian"</strong>. I'm a high school student who
+							likes computer science, CyberPatriot, and digging into real-world data
+							sets. Lately I've been working a lot with ATP tennis rankings and
+							building a web app and API around them.
+						</p>
+					</div>
+				</div>
+				<p class="hero-meta">
+					I enjoy portfolio where I can collect data, store it in a way that makes
+						 sense, and then build small tools or visualizations on top of it.
+				</p>
+				<div class="hero-links">
+					<a class="btn-primary" href="#portfolio">See my portfolio</a>
+					<a
+						class="btn-ghost"
+						href="https://github.com/Jupiterian"
+						target="_blank"
+						rel="noreferrer"
+					>
+						GitHub
+					</a>
+				</div>
+			</section>
+
+			<section id="about" class="section" aria-labelledby="about-title">
+				<h2 class="section-title" id="about-title">About me</h2>
+				<div class="section-body">
+					<p>
+						I'm a high school student who spends a lot of time on CS, CyberPatriot,
+						and random side portfolio. Most of what I work on is either related to
+						security (locking things down, scripting checks) or to data (collecting,
+						cleaning, and exploring it).
+					</p>
+					<p>
+						Outside of coding I like following sports, especially tennis, which is
+						part of why I ended up building a whole portfolio around ATP rankings.
+					</p>
+				</div>
+			</section>
+
+			<section id="cyberpatriot" class="section" aria-labelledby="cyber-title">
+				<h2 class="section-title" id="cyber-title">CyberPatriot</h2>
+				<div class="section-body">
+					<p>
+						Through <strong>CyberAegis</strong> and the CyberPatriot competition, I've spent
+						a lot of time hardening Windows systems and services. A big part of the
+						competition for me is learning how to both fix damage that's already been
+						done and prevent future problems from happening in the first place.
+					</p>
+					<p>
+						Over the last few seasons I've worked across many different parts of
+						Windows security, always thinking in terms of threat remediation and
+						prevention. That mindset has helped my teams do well:
+					</p>
+					<ul class="simple-list">
+						<li>100% uptime on an Active Directory domain controller at nationals.</li>
+						<li>1st place on the CyberPatriot Windows Semifinals (middle school division).</li>
+						<li>2nd place at the CyberPatriot National Finals (middle school division), out of 700+ teams.</li>
+					</ul>
+					<p>
+						More recently, I've also started putting together content to help middle
+						school students get into cybersecurity and understand the basics of
+						Windows hardening.
+					</p>
+				</div>
+				<div style="margin-top: 1rem;">
+					<img
+						src="CyberPatriot_Team.jpg"
+						alt="CyberPatriot team photo"
+						style="max-width: 100%; border-radius: 0.75rem; border: 1px solid #1f2937;"
+					/>
+				</div>
+			</section>
+
+			<section
+				id="portfolio"
+				class="section"
+				aria-labelledby="portfolio-title"
+			>
+				<h2 class="section-title" id="portfolio-title">Portfolio</h2>
+				<p class="section-body">
+					Here are a few things I've worked on recently. For more details, you can
+					check the GitHub links or the dedicated portfolio pages.
+				</p>
+				<div class="portfolio">
+					<article class="portfolio-card">
+						<h3>ATP Rankings Data Visualization / API</h3>
+						<p>
+							A Python and FastAPI project for exploring 50+ years of ATP singles
+							rankings, with a SQLite database, web UI, REST API, and MCP support.
+						</p>
+						<div class="portfolio-meta">
+							<span>Python · FastAPI · SQLite</span>
+							<a
+								href="atp-rankings.html"
+								class="portfolio-link"
+							>
+								More about this portfolio
+							</a>
+						</div>
+					</article>
+					<article class="portfolio-card">
+						<h3>CyberPatriot</h3>
+						<p>
+							Locking down Windows and Linux machines, running scripts to check
+							for common issues, and learning how to think about security by doing
+							competitions.
+						</p>
+						<div class="portfolio-meta">PowerShell, Bash, system hardening basics</div>
+					</article>
+					<article class="portfolio-card">
+						<h3>Machine Learning</h3>
+						<p>
+							Small notebooks where I explore machine learning concepts and build simple models.
+						</p>
+						<div class="portfolio-meta">Pytorch, Sci-kitlearn, Matplotlib</div>
+					</article>
+				</div>
+				<p class="section-body" style="margin-top: 0.75rem;">
+					You can see more on
+					<a
+						href="https://github.com/Jupiterian?tab=repositories"
+						target="_blank"
+						rel="noreferrer"
+					>
+						my GitHub profile
+					</a
+					>.
+				</p>
+			</section>
+
+			<section id="contact" class="section" aria-labelledby="contact-title">
+				<h2 class="section-title" id="contact-title">Contact</h2>
+				<p class="section-body">
+					If you want to say hi, ask about the ATP portfolio, or share ideas, the
+					 easiest way to reach me is through GitHub or Devpost:
+				</p>
+				<ul class="contact-list">
+					<li>
+						GitHub:
+						<a
+							href="https://github.com/Jupiterian"
+							target="_blank"
+							rel="noreferrer"
+							>@Jupiterian</a
+						>
+					</li>
+					<li>
+						Devpost:
+						<a
+							href="https://devpost.com/AstroDisasterMaster"
+							target="_blank"
+							rel="noreferrer"
+							>AstroDisasterMaster</a
+						>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<span>© 2025 Ishan "Jupiterian" Jha.</span>
+			<span>
+				Built with HTML, CSS, and a love for data.
+			</span>
+		</footer>
+	</body>
+  
+</html>
