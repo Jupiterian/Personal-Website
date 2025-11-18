@@ -1,3 +1,1 @@
-jupiterian.github.io
-
-Personal Website for Jupiterian (Ishan Jha)
+# Ishan Jha's Developer portfolio
