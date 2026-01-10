@@ -848,8 +848,9 @@
 				</div>
 				<nav aria-label="Primary">
 					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#leadership">Leadership</a></li>
+						<li><a href="#competitions">Competitions</a></li>
+						<li><a href="#projects">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -879,7 +880,7 @@
 						 sense, and then build small tools or visualizations on top of it.
 				</p>
 				<div class="hero-links">
-					<a class="btn-primary" href="#portfolio">See my portfolio</a>
+					<a class="btn-primary" href="#projects">See my projects</a>
 					<a
 						class="btn-ghost"
 						href="https://github.com/Jupiterian"
@@ -891,25 +892,24 @@
 				</div>
 			</section>
 
-			<section id="about" class="section" aria-labelledby="about-title">
-				<h2 class="section-title" id="about-title">About me</h2>
+			<section id="leadership" class="section" aria-labelledby="leadership-title">
+				<h2 class="section-title" id="leadership-title">Leadership</h2>
 				<div class="section-body">
-					<p>
-						I'm a high school student who spends a lot of time on CS, CyberPatriot,
-						and random side projects. Most of what I work on is either related to
-						security (locking things down, scripting checks) or to data (collecting,
-						cleaning, and exploring it).
-					</p>
-					<p>
-						Outside of coding I like following sports, especially tennis, which is
-						part of why I ended up building a whole project around ATP rankings.
-					</p>
+					<ul class="simple-list">
+						<li>
+							<a href="nextech.html"><strong>Project NexTech Executive Committee Member</strong></a> (2025 – 2026)
+						</li>
+						<li>
+							<strong>CyberAegis Windows Lead</strong> (2025 – 2026)
+						</li>
+					</ul>
 				</div>
 			</section>
 
-			<section id="cyberpatriot" class="section" aria-labelledby="cyber-title">
-				<h2 class="section-title" id="cyber-title">CyberPatriot</h2>
+			<section id="competitions" class="section" aria-labelledby="competitions-title">
+				<h2 class="section-title" id="competitions-title">Competitions</h2>
 				<div class="section-body">
+					<h3 style="font-size: 1rem; margin: 0 0 0.5rem;">CyberPatriot (2023 – Present)</h3>
 					<p>
 						Through <strong>CyberAegis</strong> and the CyberPatriot competition, I've spent
 						a lot of time hardening Windows systems and services. A big part of the
@@ -931,29 +931,31 @@
 						school students get into cybersecurity and understand the basics of
 						Windows hardening.
 					</p>
-				</div>
-				<div style="margin-top: 1rem;">
-					<img
-						src="CyberPatriot_Team.jpg"
-						alt="CyberPatriot team photo"
-						style="max-width: 100%; border-radius: 0.75rem; border: 1px solid #1f2937;"
-					/>
+					<div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+						<img
+							src="CyberPatriot_Team.jpg"
+							alt="CyberPatriot team photo"
+							style="max-width: 100%; border-radius: 0.75rem; border: 1px solid #1f2937;"
+						/>
+					</div>
+
+					<h3 style="font-size: 1rem; margin: 1.5rem 0 0.5rem;">Science Olympiad (2022 – 2024)</h3>
+					<ul class="simple-list">
+						<li>15× medalist (10× regionals, 5× state)</li>
+						<li>"Perfect Year" in 6th grade where I medaled 4 times at regionals and 4 times at state.</li>
+					</ul>
 				</div>
 			</section>
 
-			<section
-				id="portfolio"
-				class="section"
-				aria-labelledby="portfolio-title"
-			>
-				<h2 class="section-title" id="portfolio-title">Portfolio</h2>
+			<section id="projects" class="section" aria-labelledby="projects-title">
+				<h2 class="section-title" id="projects-title">Projects</h2>
 				<p class="section-body">
 					Here are a few things I've worked on recently. For more details, you can
 					check the GitHub links or the dedicated project pages.
 				</p>
-				<div class="portfolio">
+				<div class="portfolio-grid">
 					<article class="portfolio-card">
-						<h3>ATP Rankings Data Visualization / API</h3>
+						<h3>ATP Rankings Data Visualization</h3>
 						<p>
 							A Python and FastAPI project for exploring 50+ years of ATP singles
 							rankings, with a SQLite database, web UI, REST API, and MCP support.
@@ -969,20 +971,21 @@
 						</div>
 					</article>
 					<article class="portfolio-card">
-						<h3>CyberPatriot</h3>
+						<h3>MRI and Language Based Dementia Evaluation</h3>
 						<p>
-							Locking down Windows and Linux machines, running scripts to check
-							for common issues, and learning how to think about security by doing
-							competitions.
+							A multimodal machine learning project that combines brain MRI imaging 
+							with language analysis to evaluate dementia risk and provide early 
+							detection scoring.
 						</p>
-						<div class="portfolio-meta">PowerShell, Bash, system hardening basics</div>
-					</article>
-					<article class="portfolio-card">
-						<h3>Machine Learning</h3>
-						<p>
-							Small notebooks where I explore machine learning concepts and build simple models.
-						</p>
-						<div class="portfolio-meta">Pytorch, Sci-kitlearn, Matplotlib</div>
+						<div class="portfolio-meta">
+							<span>Python · PyTorch · Medical Imaging</span>
+							<a
+								href="dementia-project.html"
+								class="portfolio-link"
+							>
+								More about this project
+							</a>
+						</div>
 					</article>
 				</div>
 				<p class="section-body" style="margin-top: 0.75rem;">
@@ -1001,7 +1004,7 @@
 			<section id="contact" class="section" aria-labelledby="contact-title">
 				<h2 class="section-title" id="contact-title">Contact</h2>
 				<p class="section-body">
-					If you want to say hi, ask about the ATP project, or share ideas, the
+					If you want to say hi, ask about my projects, or share ideas, the
 					 easiest way to reach me is through GitHub or Devpost:
 				</p>
 				<ul class="contact-list">
