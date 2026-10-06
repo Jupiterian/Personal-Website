@@ -22,6 +22,7 @@
             <li><a href="#leadership">Leadership</a></li>
             <li><a href="#competitions">Competitions</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#learning">Learning</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -51,7 +52,7 @@
         <div class="metric-card"><span class="metric-value">2×</span><span class="metric-label">CyberPatriot National Finalist</span></div>
         <div class="metric-card"><span class="metric-value">400+</span><span class="metric-label">Project NexTech volunteers supported</span></div>
         <div class="metric-card"><span class="metric-value">18</span><span class="metric-label">Countries reached through STEM teaching</span></div>
-        <div class="metric-card"><span class="metric-value">50+</span><span class="metric-label">Years of ATP rankings analyzed</span></div>
+        <a class="metric-card" href="https://deep-ml.ishanjha.com/" target="_blank" rel="noreferrer"><span class="metric-value" id="deepml-solved">7</span><span class="metric-label">Deep-ML challenges solved</span></a>
       </section>
 
       <section id="leadership" class="section" aria-labelledby="leadership-title">
@@ -143,8 +144,35 @@
             <div class="card-meta"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Medical Imaging</span></div>
             <a class="btn-text" href="dementia-project.html">More about this project →</a>
           </article>
+          <article class="project-card">
+            <h3>Morpheus: Learning the Dynamics of Unseen Physical Environments Through Observation Alone</h3>
+            <p>A system that learns the underlying mechanics of physical environments through observation alone. More info coming soon.</p>
+            <ul class="clean-list">
+              <li>IAI2O Global Finals · Honorable Mention</li>
+              <li>IAI2O Preliminary Round · Regional 1st Place</li>
+            </ul>
+            <div class="card-meta"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Physics</span></div>
+          </article>
         </div>
         <p class="lead">See more work on <a href="https://github.com/Jupiterian?tab=repositories" target="_blank" rel="noreferrer">my GitHub repositories</a>.</p>
+      </section>
+
+      <section id="learning" class="section" aria-labelledby="learning-title">
+        <div class="section-header"><div><p class="section-kicker">Learning in public</p><h2 class="section-title" id="learning-title">Machine learning, from first principles.</h2></div></div>
+        <div class="card-grid">
+          <article class="project-card">
+            <h3>ML Learning Portfolio</h3>
+            <p>A self-curated portfolio of my ML scratchwork: core models and algorithms built from scratch, alongside mini projects that put them to use.</p>
+            <div class="card-meta"><span class="tag">Python</span><span class="tag">From scratch</span><span class="tag">Mini projects</span></div>
+            <a class="btn-text" href="https://github.com/Jupiterian/ML-Learning-Portfolio" target="_blank" rel="noreferrer">View on GitHub →</a>
+          </article>
+          <article class="project-card">
+            <h3>Deep-ML Solutions</h3>
+            <p>A home for all of my work on <a href="https://www.deep-ml.com/" target="_blank" rel="noreferrer">deep-ml.com</a>, collecting my solutions to its machine learning and linear algebra problems in one place.</p>
+            <div class="card-meta"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Problem solving</span></div>
+            <a class="btn-text" href="https://deep-ml.ishanjha.com/" target="_blank" rel="noreferrer">Visit deep-ml.ishanjha.com →</a>
+          </article>
+        </div>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-title">
@@ -156,6 +184,17 @@
         </ul>
       </section>
     </main>
+
+    <script>
+      // Live count of solved Deep-ML challenges, from the same progress.json that deep-ml.ishanjha.com reads.
+      fetch("https://raw.githubusercontent.com/Jupiterian/deep-ml/main/progress.json", { cache: "no-cache" })
+        .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        .then((progress) => {
+          const solved = Object.values(progress.items || {}).filter((item) => item && item.path).length;
+          document.getElementById("deepml-solved").textContent = solved.toLocaleString();
+        })
+        .catch(() => {});
+    </script>
 
     <footer><span>© 2026 Ishan Jha.</span><span>Built with HTML, CSS, and a focus on useful systems.</span></footer>
   </body>
